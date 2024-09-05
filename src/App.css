@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+*{
+  font-family:'Helvetica Neue', sans-serif;
+  text-decoration: none;
+  color: #f6f6f4;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #151415;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header{
+  width: 100%;
+  display: grid;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.NavBar{
+  padding: 1rem 3rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.ulLogo{
+  width: 100%;
+}
+
+.logo{
+  font-size: 2rem;
+}
+
+.ulPages{
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.carritoIMG{
+  width: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.imagenUser{
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+
+}
+
+.cardsContainer{
+  width: 100%;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.userCard{
+  border: 1px solid #151415;
+  background-color: #921c2d;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.infoUser{
+  display: grid;
+  gap: .5rem;
+  padding: .5rem 0;
+}
+
+.botonChusmear{
+  width: fit-content;
+  background-color: #151415;
+  border: none;
+  border-radius: 5px;
+  padding: .5rem;
 }
