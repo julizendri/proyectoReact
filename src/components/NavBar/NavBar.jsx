@@ -10,9 +10,9 @@ export const NavBar = () => {
             </Link>
             <div className="ulPages">
                 <NavLink to='/' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Inicio</NavLink>
-                <NavLink to='/category/Productos' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Productos</NavLink>
-                <NavLink to='/category/Nosotros' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Nosotros</NavLink>
-                <NavLink to='/category/Contacto' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Contacto</NavLink>
+                <NavLink to='Productos' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Productos</NavLink>
+                <NavLink to='Nosotros' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Nosotros</NavLink>
+                <NavLink to='Contacto' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Contacto</NavLink>
                 <CartWidget />
             </div>
         </nav>
