@@ -19,7 +19,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
         <div className="contador">
             <div className="controls">
                 <button className='botonCounter' onClick={decrease}>-</button>
-                <p className="cantidad">{quantity}</p>
+                <p>{quantity}</p>
                 <button className='botonCounter' onClick={increase}>+</button>
             </div>
             <div>

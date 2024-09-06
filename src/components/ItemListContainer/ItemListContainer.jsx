@@ -1,25 +1,25 @@
-import { Card } from "./components/Card"
-import buzos from './assets/buzos.png'
-import pants from './assets/pants.png'
-import conjunto from './assets/conjunto.png'
+import './ItemListContainer.css'
+import { useState, useEffect } from "react"
+import { getProducts } from '../../asyncMock'
+import { ItemList } from './ItemList/ItemList'
 
+export const ItemListContainer = ({ greeting }) => {
+    const [products, setProducts] = useState([])
 
-export const ItemListContainer = () => {
-    return <>
-        <Card
-        imagenSRC={buzos} 
-        name="Partes de arriba"
-        details="Remeras, camperas, buzos y más"
-        ></Card>
-        <Card
-        imagenSRC={pants}
-        name="Partes de abajo"
-        details="Todo lo que necesitas para tus piernas"
-        ></Card>
-        <Card
-        imagenSRC={conjunto}
-        name="Conjuntos"
-        details="Los conjuntos mas lindos y cancheros"
-        ></Card>
-    </>
+    useEffect(() => {
+        getProducts()
+            .then(response => {
+                setProducts(response)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    })
+
+    return (
+        <div className="itemsContainer">
+            <h1>{greeting}</h1>
+            <ItemList products={products} />
+        </div>
+    )
 }

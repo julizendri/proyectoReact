@@ -1,0 +1,27 @@
+.NavBar {
+    padding: 1rem 3rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.ulLogo {
+    width: 100%;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.ulPages {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.carritoIMG {
+    width: 2rem;
+}

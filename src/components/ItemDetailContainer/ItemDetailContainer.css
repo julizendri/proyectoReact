@@ -1,0 +1,44 @@
+.ItemDetailContainer{
+    background-color: #921c2d;
+    display: grid;
+    width: 50%;
+    margin: 1rem 25%;
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ItemDetail{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    gap: .5rem;
+}
+
+.infoItemDetail{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    gap: .3rem;
+}
+
+.contador {
+    display: grid;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.botonCounter {
+    background-color: #151415;
+    border: none;
+    border-radius: 5px;
+    padding: .5rem;
+}
