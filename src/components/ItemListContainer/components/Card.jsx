@@ -1,9 +1,9 @@
 import { ImageUser } from "./ImageUser"
 import { InfoUser } from "./InfoUser"
 
-export const Card = ({imagenURL, name, details}) => {
+export const Card = ({imagenSRC, name, details}) => {
     return <div className="userCard">
-        <ImageUser imagenURL={imagenURL} />
+        <ImageUser imagenSRC={imagenSRC} />
         <InfoUser  name={name} details={details}/>
     </div>
 }

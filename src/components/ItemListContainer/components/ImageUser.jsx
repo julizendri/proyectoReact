@@ -1,7 +1,7 @@
-export const ImageUser = ({imagenURL}) => {
+export const ImageUser = ({imagenSRC}) => {
     return <>
         <div>
-            <img className="imagenUser" src={imagenURL} alt="img"/>
+            <img className="imagenUser" src={imagenSRC} alt="imgProducto"/>
         </div>
     </>
 }
