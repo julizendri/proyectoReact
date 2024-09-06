@@ -1,5 +1,5 @@
-*{
-  font-family:'Helvetica Neue', sans-serif;
+* {
+  font-family: 'Helvetica Neue', sans-serif;
   text-decoration: none;
   color: #f6f6f4;
   list-style-type: none;
@@ -7,17 +7,17 @@
   padding: 0;
 }
 
-body{
+body {
   background-color: #151415;
 }
 
-header{
+header {
   width: 100%;
   display: grid;
   justify-content: center;
 }
 
-.NavBar{
+.NavBar {
   padding: 1rem 3rem;
   width: 100%;
   display: grid;
@@ -25,15 +25,15 @@ header{
   justify-items: center;
 }
 
-.ulLogo{
+.ulLogo {
   width: 100%;
 }
 
-.logo{
+.logo {
   font-size: 2rem;
 }
 
-.ulPages{
+.ulPages {
   width: 100%;
   display: flex;
   align-items: center;
@@ -41,18 +41,15 @@ header{
   gap: 1.5rem;
 }
 
-.carritoIMG{
+.carritoIMG {
   width: 2rem;
 }
 
-.imagenUser{
+.imagenUser {
   width: 100%;
-  height: auto;
-  border-radius: 6px;
-
 }
 
-.cardsContainer{
+.cardsContainer {
   width: 100%;
   padding: 1rem;
   display: grid;
@@ -61,7 +58,7 @@ header{
   justify-content: center;
 }
 
-.userCard{
+.userCard {
   border: 1px solid #151415;
   background-color: #921c2d;
   padding: 1rem;
@@ -69,14 +66,42 @@ header{
   width: 100%;
 }
 
-.infoUser{
+.infoUser {
   display: grid;
   gap: .5rem;
   padding: .5rem 0;
 }
 
-.botonChusmear{
+.botonChusmear {
   width: fit-content;
+  background-color: #151415;
+  border: none;
+  border-radius: 5px;
+  padding: .5rem;
+}
+
+.divContador{
+  display: grid;
+  justify-content: center;
+}
+
+.contador {
+  background-color: #921c2d;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  display: grid;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.botonCounter {
   background-color: #151415;
   border: none;
   border-radius: 5px;

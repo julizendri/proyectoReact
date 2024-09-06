@@ -1,6 +1,6 @@
-import CartWidget from "./components/CartWidget/CartWidget";
+import { CartWidget } from "./components/CartWidget/CartWidget";
 
-const NavBar = () => {
+export const NavBar = () => {
     return (
         <nav className="NavBar">
             <ul className="ulLogo">
@@ -16,5 +16,3 @@ const NavBar = () => {
         </nav>
     )
 }
-
-export default NavBar;
