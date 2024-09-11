@@ -23,7 +23,7 @@ function DetalleProducto() {
     }
 
     return (
-        <div>
+        <div className="divDetalleProducto">
             <Producto key={producto.id} {...producto}/>
         </div>
     )

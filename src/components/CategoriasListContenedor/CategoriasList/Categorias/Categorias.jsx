@@ -6,7 +6,7 @@ export const Categorias = ({nombre, img, descripcion, id}) => {
             <header className="headerCategoria">{nombre}</header>
             <picture><img className='imgCategoria' src={img} alt={nombre} /></picture>
             <section><p className="pCategoria">{descripcion}</p></section>
-            <Link className="verMas"to={`/productos/${id}`}>Ver {nombre}</Link>
+            <Link className="boton"to={`/productos/${id}`}>Ver {nombre}</Link>
         </div>
     )
 }

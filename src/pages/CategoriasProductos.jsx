@@ -27,7 +27,7 @@ export const CategoriasProducto = () => {
     }
 
     return (
-        <div>
+        <div className="divCategorias">
             <h1>{categoria.nombre}</h1>
             <ProductoList productos={productos} />
         </div>

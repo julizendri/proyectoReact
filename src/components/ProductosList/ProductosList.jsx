@@ -1,3 +1,4 @@
+import './ProductosList.css'
 import {Producto} from './Productos/Productos'
 
 export const ProductoList = ({ productos }) => {
