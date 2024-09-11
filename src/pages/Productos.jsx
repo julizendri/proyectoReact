@@ -1,6 +1,11 @@
+import { CategoriasListContenedor } from "../components/CategoriasListContenedor/CategoriasListContenedor";
+
 function Productos() {
     return (
-        <div><h1>Productos</h1></div>
+        <div className="cajaProductos">
+            <h1>Productos</h1>
+            <CategoriasListContenedor />
+        </div>
     )
 }
 

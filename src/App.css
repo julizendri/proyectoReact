@@ -26,3 +26,11 @@ header {
 .textoError{
   color: #921c2d;
 }
+
+h1{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
