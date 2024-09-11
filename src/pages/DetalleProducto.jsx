@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { getProductById } from "../asyncMock";
 import { useState, useEffect } from "react";
-import Productos from "./Productos";
+import { Producto } from "../components/ProductosList/Productos/Productos";
 
 function DetalleProducto() {
     const { productoID } = useParams();
@@ -10,21 +10,21 @@ function DetalleProducto() {
 
     useEffect(() => {
         getProductById(productoID)
-        .then((producto) =>{
-            setProducto(producto);
-        })
-        .catch((error) => {
-            console.error('Error fetching producto: ', error)
-        })
+            .then((producto) => {
+                setProducto(producto);
+            })
+            .catch((error) => {
+                console.error('Error fetching producto: ', error)
+            })
     })
 
     if (!producto) {
-        return <div className="loading">Loading...</div>;
+        return <div className="cargando">Cargando...</div >;
     }
 
     return (
         <div>
-            <Productos/>
+            <Producto key={producto.id} {...producto}/>
         </div>
     )
 }

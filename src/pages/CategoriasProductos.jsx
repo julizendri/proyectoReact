@@ -23,7 +23,7 @@ export const CategoriasProducto = () => {
     }, [categoriaID]);
 
     if (!categoria || productos.length === 0) {
-        return <div className="loading">Loading...</div>;
+        return <div className="cargando">Cargando...</div>;
     }
 
     return (
