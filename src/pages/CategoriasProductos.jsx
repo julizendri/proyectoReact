@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getCategoriesByID, getProductByCategory } from "../asyncMock";
 import { ProductoList } from '../components/ProductosList/ProductosList';
+import { Link } from "react-router-dom";
 
 export const CategoriasProducto = () => {
     const { categoriaID } = useParams();
@@ -28,8 +29,9 @@ export const CategoriasProducto = () => {
 
     return (
         <div className="divCategorias">
-            <h1>{categoria.nombre}</h1>
+            <h1>{categoria.nombre.charAt(0).toUpperCase() + categoria.nombre.slice(1).toLowerCase()}</h1>
             <ProductoList productos={productos} />
+            <Link to={`/Productos`}>Volver a Categorias</Link>
         </div>
     );
 };

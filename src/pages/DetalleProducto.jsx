@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { getProductById } from "../asyncMock";
 import { useState, useEffect } from "react";
-import { Producto } from "../components/ProductosList/Productos/Productos";
+import { ProductDetail } from "../components/ProductDetail/ProductDetail";
 
 function DetalleProducto() {
     const { productoID } = useParams();
@@ -14,19 +14,19 @@ function DetalleProducto() {
                 setProducto(producto);
             })
             .catch((error) => {
-                console.error('Error fetching producto: ', error)
-            })
-    })
+                console.error('Error fetching producto: ', error);
+            });
+    }, [productoID]); // Añadir [productoID] como dependencia para evitar llamadas infinitas
 
     if (!producto) {
-        return <div className="cargando">Cargando...</div >;
+        return <div className="cargando">Cargando...</div>;
     }
 
     return (
         <div className="divDetalleProducto">
-            <Producto key={producto.id} {...producto}/>
+            <ProductDetail {...producto} />
         </div>
-    )
+    );
 }
 
 export default DetalleProducto;

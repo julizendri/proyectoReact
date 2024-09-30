@@ -11,8 +11,6 @@ export const NavBar = () => {
             <div className="ulPages">
                 <NavLink to='/' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Inicio</NavLink>
                 <NavLink to='Productos' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Productos</NavLink>
-                <NavLink to='Nosotros' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Nosotros</NavLink>
-                <NavLink to='Contacto' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Contacto</NavLink>
                 <CartWidget />
             </div>
         </nav>

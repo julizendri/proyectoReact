@@ -5,9 +5,9 @@ import conjunto from './assets/conjunto.webp'
 // categorias
 
 const categorias = [
-    { id: 'Buzos', nombre: 'Buzos', img: buzo, descripcion: 'Buzo de friza de alta calidad' },
-    { id: 'Pantalones', nombre: 'Pantalones', img: pant, descripcion: 'Pantalón de friza de alta calidad' },
-    { id: 'Conjuntos', nombre: 'Conjuntos', img: conjunto, descripcion: 'Buzo y pantalón de friza de alta calidad en conjunto' },
+    { id: 'buzos', nombre: 'buzos', img: buzo, descripcion: 'Buzo de friza de alta calidad' },
+    { id: 'pantalones', nombre: 'pantalones', img: pant, descripcion: 'Pantalón de friza de alta calidad' },
+    { id: 'conjuntos', nombre: 'conjuntos', img: conjunto, descripcion: 'Buzo y pantalón de friza de alta calidad en conjunto' },
 ]
 
 export const getCategories = () => {
