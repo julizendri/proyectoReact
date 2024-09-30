@@ -5,6 +5,7 @@ import { Footer } from './components/Footer/Footer';
 import Home from './pages/Home';
 import Productos from './pages/Productos';
 import { Cart } from './pages/Cart';
+import { Checkout } from './pages/Checkout';
 import Error from './pages/Error';
 import DetalleProducto from './pages/DetalleProducto';
 import { CategoriasProducto } from './pages/CategoriasProductos';
@@ -24,6 +25,7 @@ function App() {
             <Route path='productos/:categoriaID' element={<CategoriasProducto />} />
             <Route path='productos/:categoriaID/:productoID' element={<DetalleProducto />} />
             <Route path='cart' element={<Cart />} />
+            <Route path='checkout' element={<Checkout />} />
             <Route path='*' element={<Error />}></Route>
           </Routes>
           <footer>

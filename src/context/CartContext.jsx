@@ -33,8 +33,18 @@ export const CartProvider = ({ children }) => {
     const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
     const total = cart.reduce((acc, item) => acc + item.precio * item.quantity, 0).toFixed(2);
 
+    const handleReduceQuantity = (item) => {
+        const existingItem = cart.find(prod => prod.id === item.id);
+        
+        if (existingItem && existingItem.quantity > 1) {
+            addItem(item, -1);
+        } else if (existingItem && existingItem.quantity === 1) {
+            removeItem(item.id);
+        }
+    };
+
     return (
-        <CartContext.Provider value={{ cart, addItem, ClearCart, removeItem, totalQuantity, total }}>
+        <CartContext.Provider value={{ cart, addItem, ClearCart, removeItem, totalQuantity, total, handleReduceQuantity }}>
             {children}
         </CartContext.Provider>
     );
