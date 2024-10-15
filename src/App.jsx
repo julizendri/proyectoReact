@@ -9,6 +9,7 @@ import { Cart } from './Pages/Cart';
 import { Checkout } from './Pages/Checkout';
 import { Error } from './Pages/Error';
 import { CartProvider } from './context/CartContext';
+import { ConfirmationPage } from './Pages/ConfirmationPage';
 import './App.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
                         <Route path='cart' element={<Cart />} />
                         <Route path='checkout' element={<Checkout />} />
                         <Route path='*' element={<Error />}></Route>
+                        <Route path='confirmation' element={<ConfirmationPage />}></Route>
                     </Routes>
                     <footer>
                         <Footer />

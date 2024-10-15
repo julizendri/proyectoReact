@@ -19,7 +19,6 @@ export const CheckoutItemList = () => {
                 ))
             )}
             <h2>Total: ${total}</h2>
-            <button className="botonFinalizar" disabled={cart.length === 0}>Finalizar Compra</button>
         </div>
     );
 };
