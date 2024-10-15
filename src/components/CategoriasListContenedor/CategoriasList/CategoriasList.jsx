@@ -1,9 +1,11 @@
-import { Categorias } from "./Categorias/Categorias";
+import { Categorias } from './Categorias/Categorias';
 
-export const CategoriasList = ({categorias}) =>{
-    return(
+export const CategoriasList = ({ categories }) => {
+    return (
         <div className="categoriasList">
-            {categorias.map(cat=> <Categorias key={cat.id} {...cat}/>)}
+            {categories.map(cat => (
+                <Categorias key={cat.id} category={cat} />
+            ))}
         </div>
-    )
-}
+    );
+};

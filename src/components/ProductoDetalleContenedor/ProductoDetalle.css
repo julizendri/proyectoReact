@@ -1,0 +1,28 @@
+.ProductoDetalleContenedor {
+    width: 100%;
+    max-width: 80rem;
+    display: grid;
+}
+
+.productoDetalleCard {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    gap: 2rem;
+    box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.2);
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.imgDetalle {
+    width: 100%;
+}
+
+.detalleInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    text-align: left;
+}

@@ -1,64 +1,95 @@
 * {
-  font-family: 'Helvetica Neue', sans-serif;
-  text-decoration: none;
-  color: #f6f6f4;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
 }
 
 body {
-  background-color: #151415;
+    background-color: #f6f6f4;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+    letter-spacing: 2px;
 }
 
 header {
-  width: 100%;
-  display: grid;
-  justify-content: center;
+    width: 100%;
+    background-color: #ebe9ea;
+    display: grid;
+    justify-items: center;
 }
 
-.paginaError{
-  text-align: center;
-  margin: 20% 0 35% 0;
-  display: grid;
-  gap: 1rem;
+footer {
+    width: 100%;
+    background-color: #ebe9ea;
+    padding: 2rem;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    padding: 1.5rem 2rem;
 }
 
-.textoError{
-  color: #921c2d;
+.cuerpo {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    padding: 1.5rem 2rem;
+    gap: 1rem;
 }
 
-h1{
-  text-align: center;
+.paginaError {
+    text-align: center;
+    margin: 30% 0 35% 0;
+    display: grid;
+    gap: 1rem;
 }
 
-h2{
-  text-align: center;
+.textoError {
+    color: #caadb9;
 }
 
-.cargando{
-  text-align: center;
-  margin: 20% 0 35% 0;
-  font-size: 2rem;
+.CheckoutBoton {
+    padding: .3rem .7rem;
+    background-color: #caadb9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
 }
 
-.divCategorias{
-  width: 100%;
-  text-align: center;
+.CheckoutBoton:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.2);
 }
 
-.divDetalleProducto{
-  align-self: center;
-  width: 60%;
-  text-align: center;
+.LimpiarCarrito {
+    padding: .3rem .7rem;
+    background-color: #ebe9ea;
+    font-size: .8rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
 }
 
-img{
-  width: 100%;
+.LimpiarCarrito:hover{
+    background-color: #e4dee2;
 }
 
-.App{
-  display: grid;
-  justify-items: center;
+.noProduct{
+    text-align: center;
 }

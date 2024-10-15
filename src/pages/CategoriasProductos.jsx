@@ -1,37 +1,30 @@
-import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { getCategoriesByID, getProductByCategory } from "../asyncMock";
-import { ProductoList } from '../components/ProductosList/ProductosList';
-import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../firebase';
+import { ProductoList } from '../Components/ProductoList/ProductoList';
+import { useParams } from 'react-router-dom';
 
-export const CategoriasProducto = () => {
-    const { categoriaID } = useParams();
-    const [categoria, setCategoria] = useState(null);
+export const CategoriasProductos = () => {
+    const { categoriaId } = useParams();
     const [productos, setProductos] = useState([]);
 
     useEffect(() => {
-        getCategoriesByID(categoriaID)
-            .then((categoria) => {
-                setCategoria(categoria);
-                return getProductByCategory(categoria.nombre.toLowerCase());
-            })
-            .then((productos) => {
-                setProductos(productos);
-            })
-            .catch((error) => {
-                console.error('Error fetching data: ', error);
-            });
-    }, [categoriaID]);
+        const fetchProductos = async () => {
+            const productosCollection = collection(db, 'productos');
+            const productoSnapshot = await getDocs(productosCollection);
+            const productoList = productoSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            
+            const productosFiltrados = productoList.filter(producto => producto.category === categoriaId);
+            setProductos(productosFiltrados);
+        };
 
-    if (!categoria || productos.length === 0) {
-        return <div className="cargando">Cargando...</div>;
-    }
+        fetchProductos();
+    }, [categoriaId]);
 
     return (
-        <div className="divCategorias">
-            <h1>{categoria.nombre.charAt(0).toUpperCase() + categoria.nombre.slice(1).toLowerCase()}</h1>
+        <div className="cuerpo">
+            <h1>{categoriaId}</h1>
             <ProductoList productos={productos} />
-            <Link to={`/Productos`}>Volver a Categorias</Link>
         </div>
     );
 };

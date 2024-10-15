@@ -1,27 +1,31 @@
+import { useEffect, useState } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase';
+import { CategoriasList } from './CategoriasList/CategoriasList';
+import { Loader } from '../Shared/Loader/Loader';
 import "./CategoriasListContenedor.css"
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { getCategoriesByID, getCategories } from "../../asyncMock";
-import { CategoriasList } from "./CategoriasList/CategoriasList";
 
 export const CategoriasListContenedor = () => {
-    const [categorias, setCategorias] = useState([]);
-
-    const { categoriaID } = useParams();
+    const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        const asyncFunc = categoriaID ? getCategoriesByID : getCategories
+        const fetchCategories = async () => {
+            const categoriesCollection = collection(db, 'categories');
+            const categorySnapshot = await getDocs(categoriesCollection);
+            const categoryList = categorySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            setCategories(categoryList);
+        };
 
-        asyncFunc(categoriaID)
-            .then(response => {
-                setCategorias(response)
-            })
-            .catch(error => {
-                console.error('Error fetching categoria', error)
-            })
-    }, [categoriaID]);
+        fetchCategories();
+    }, []);
 
     return (
-        <CategoriasList categorias={categorias} />
+        <div className="categoriasListContenedor">
+            {categories.length > 0 ? (
+                <CategoriasList categories={categories} />
+            ) : (
+                <Loader/>
+            )}
+        </div>
     );
 };

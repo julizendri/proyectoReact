@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom';
 
-export const Categorias = ({nombre, img, descripcion, id}) => {
+export const Categorias = ({ category }) => {
     return (
-        <div className="Categoria">
-            <header className="headerCategoria">{nombre}</header>
-            <picture><img className='imgCategoria' src={img} alt={nombre} /></picture>
-            <section><p className="pCategoria">{descripcion}</p></section>
-            <Link className="boton"to={`/productos/${id}`}>Ver {nombre}</Link>
-        </div>
-    )
-}
+            <Link className="categoriaItem" to={`/productos/${category.name}`}>
+                <h3>{category.name}</h3>
+            <img className='imgCategorias' src={category.image} alt={`${category.name} imagen`} />
+            <p>{category.description}</p>
+                <p className='verMas'>Ver Más</p>
+            </Link>
+    );
+};

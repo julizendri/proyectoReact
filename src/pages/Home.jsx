@@ -1,15 +1,10 @@
-import { CategoriasListContenedor } from "../components/CategoriasListContenedor/CategoriasListContenedor";
+import { CategoriasListContenedor } from "../Components/CategoriasListContenedor/CategoriasListContenedor";
 
-function Home() {
+export const Home = () => {
     return (
-        <div className="cajaHome">
-            <h1>Descubrí KAIA</h1>
+        <div className="cuerpo">
+            <h1>Conocé Kaia</h1>
             <CategoriasListContenedor />
-            <div className="cajaContactoHome">
-                <h2>Contacto</h2>
-            </div>
         </div>
-    )
-}
-
-export default Home;
+    );
+};

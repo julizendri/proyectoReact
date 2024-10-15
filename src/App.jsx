@@ -1,40 +1,40 @@
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { NavBar } from './components/NavBar/NavBar';
-import { Footer } from './components/Footer/Footer';
-import Home from './pages/Home';
-import Productos from './pages/Productos';
-import { Cart } from './pages/Cart';
-import { Checkout } from './pages/Checkout';
-import Error from './pages/Error';
-import DetalleProducto from './pages/DetalleProducto';
-import { CategoriasProducto } from './pages/CategoriasProductos';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { NavBar } from './Components/NavBar/NavBar';
+import { Footer } from './Components/Footer/Footer';
+import { Home } from './Pages/Home';
+import { Productos } from './Pages/Productos';
+import { CategoriasProductos } from './Pages/CategoriasProductos';
+import { DetalleProductos } from './Pages/DetalleProductos';
+import { Cart } from './Pages/Cart';
+import { Checkout } from './Pages/Checkout';
+import { Error } from './Pages/Error';
 import { CartProvider } from './context/CartContext';
+import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <CartProvider>
-          <header>
-            <NavBar />
-          </header>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='productos' element={<Productos />} />
-            <Route path='productos/:categoriaID' element={<CategoriasProducto />} />
-            <Route path='productos/:categoriaID/:productoID' element={<DetalleProducto />} />
-            <Route path='cart' element={<Cart />} />
-            <Route path='checkout' element={<Checkout />} />
-            <Route path='*' element={<Error />}></Route>
-          </Routes>
-          <footer>
-            <Footer />
-          </footer>
-        </CartProvider>
-      </BrowserRouter>
-    </div>
-  );
+    return (
+        <div className='App'>
+            <BrowserRouter>
+                <CartProvider>
+                    <header>
+                        <NavBar />
+                    </header>
+                    <Routes>
+                        <Route path='/' element={<Home />} />
+                        <Route path='productos' element={<Productos />} />
+                        <Route path='productos/:categoriaId' element={<CategoriasProductos />} />
+                        <Route path='productos/:categoriaId/:id' element={<DetalleProductos />} />
+                        <Route path='cart' element={<Cart />} />
+                        <Route path='checkout' element={<Checkout />} />
+                        <Route path='*' element={<Error />}></Route>
+                    </Routes>
+                    <footer>
+                        <Footer />
+                    </footer>
+                </CartProvider>
+            </BrowserRouter>
+        </div>
+    )
 }
 
 export default App;

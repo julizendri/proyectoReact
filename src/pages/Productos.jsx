@@ -1,12 +1,10 @@
-import { CategoriasListContenedor } from "../components/CategoriasListContenedor/CategoriasListContenedor";
+import { CategoriasListContenedor } from '../Components/CategoriasListContenedor/CategoriasListContenedor';
 
-function Productos() {
+export const Productos = () => {
     return (
-        <div className="cajaProductos">
+        <div className="cuerpo">
             <h1>Productos</h1>
             <CategoriasListContenedor />
         </div>
-    )
-}
-
-export default Productos;
+    );
+};

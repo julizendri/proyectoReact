@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Error() {
+export const Error = () => {
     return (
         <div className="paginaError">
             <h1>404 NOT FOUND</h1>
@@ -8,5 +8,3 @@ function Error() {
         </div>
     )
 }
-
-export default Error;
