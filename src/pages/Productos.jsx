@@ -1,4 +1,4 @@
-import { CategoriasListContenedor } from '../Components/CategoriasListContenedor/CategoriasListContenedor';
+import { CategoriasListContenedor } from '../components/CategoriasListContenedor/CategoriasListContenedor';
 
 export const Productos = () => {
     return (

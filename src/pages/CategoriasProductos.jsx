@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
-import { ProductoList } from '../Components/ProductoList/ProductoList';
+import { ProductoList } from '../components/ProductoList/ProductoList';
 import { useParams } from 'react-router-dom';
 
 export const CategoriasProductos = () => {

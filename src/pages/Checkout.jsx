@@ -1,6 +1,6 @@
 import { useState, useContext } from 'react';
-import { CheckoutItemList } from '../Components/CheckoutItemList/CheckoutItemList';
-import { Contacto } from '../Components/Contacto/Contacto';
+import { CheckoutItemList } from '../components/CheckoutItemList/CheckoutItemList';
+import { Contacto } from '../components/Contacto/Contacto';
 import { db } from '../firebase';
 import { setDoc, doc, updateDoc, increment } from "firebase/firestore";
 import { CartContext } from '../context/CartContext';

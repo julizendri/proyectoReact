@@ -1,4 +1,4 @@
-import { ProductoDetalleContenedor } from '../Components/ProductoDetalleContenedor/ProductoDetalleContenedor';
+import { ProductoDetalleContenedor } from '../components/ProductoDetalleContenedor/ProductoDetalleContenedor';
 
 export const DetalleProductos = () => {
     return (

@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { NavBar } from './Components/NavBar/NavBar';
-import { Footer } from './Components/Footer/Footer';
-import { Home } from './Pages/Home';
-import { Productos } from './Pages/Productos';
-import { CategoriasProductos } from './Pages/CategoriasProductos';
-import { DetalleProductos } from './Pages/DetalleProductos';
-import { Cart } from './Pages/Cart';
-import { Checkout } from './Pages/Checkout';
-import { Error } from './Pages/Error';
+import { NavBar } from './components/NavBar/NavBar';
+import { Footer } from './components/Footer/Footer';
+import { Home } from './pages/Home';
+import { Productos } from './pages/Productos';
+import { CategoriasProductos } from './pages/CategoriasProductos';
+import { DetalleProductos } from './pages/DetalleProductos';
+import { Cart } from './pages/Cart';
+import { Checkout } from './pages/Checkout';
+import { Error } from './pages/Error';
 import { CartProvider } from './context/CartContext';
-import { ConfirmationPage } from './Pages/ConfirmationPage';
+import { ConfirmationPage } from './pages/ConfirmationPage';
 import './App.css';
 
 function App() {
